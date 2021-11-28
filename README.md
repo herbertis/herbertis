@@ -1,4 +1,4 @@
-### Olá, eu sou Herbert Sousa 👋
+### Olá, eu sou Herbert Ishimura Sousa 👋
 
 <div align="center">
   <a href="https://github.com/herbertis">
