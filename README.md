@@ -1,22 +1,62 @@
-## Olá, Her falando aqui!
+# 👋 Olá! Eu sou Herbert Ishimura Sousa
 
-Com mais de sete anos de experiência em design digital, atuei intensamente em projetos de interface (UI) e experiência do usuário (UX) para web e mobile. Nos últimos anos, venho evoluindo como Desenvolvedor Front-end, integrando design e código para criar produtos mais funcionais e visualmente impactantes.
+Sou um **Front-end Developer Pleno** com mais de **7 anos de experiência em design digital**, atuando na criação de **interfaces responsivas, funcionais e visualmente impactantes** para web e mobile. Tenho paixão por unir **design, usabilidade e código**, criando soluções que realmente fazem a diferença na experiência do usuário.
 
-Tenho domínio em ferramentas como Adobe Photoshop, Illustrator, Figma e Adobe XD, além de sólida experiência com HTML5, CSS3, JavaScript, Bootstrap e WordPress. Atualmente, estou me aprofundando em ReactJS e React Native, ampliando meu repertório técnico.
+Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commerce oficial da **Xiaomi Brasil**, com forte atuação em tecnologias como **HTML5, CSS3, JavaScript e Liquid**, utilizando a plataforma **Linx**.
 
-Sou movido por desafios, aprendizado constante e a busca por criar soluções digitais que unam estética, usabilidade e performance. Em cada projeto, meu foco é entregar interfaces responsivas, acessíveis e alinhadas às necessidades do usuário.
+---
 
-<div style="display: inline_block"><br>
-  <img align="center" alt="herbert-react" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-  <img align="center" alt="herbert-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="herbert-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="herbert-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">   
-</div>
-  
-  ##
- 
-<div> 
-  
- <a href="https://www.linkedin.com/in/herbertsousa" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-  
-</div>
+## 🎓 Formação Acadêmica
+
+- **Centro Universitário FAM**  
+  *Curso Superior de Tecnologia em Design Gráfico e Digital*  
+  📆 2022 – Jul/2025 (em andamento)  
+  Disciplinas: Design Digital, Design Gráfico, Produção Multimídia.
+
+- **IFSULDEMINAS – Instituto Federal do Sul de Minas Gerais**  
+  *Técnico em Desenvolvimento de Sistemas*  
+  📆 Out/2020 – Set/2022  
+  Foco: Desenvolvimento Web, Programação, Banco de Dados.
+
+---
+
+## 📜 Certificações
+
+- [Google UX Design – Coursera / Google](https://www.coursera.org/account/accomplishments/specialization/certificate/...)
+- [HTML e CSS para Iniciantes – Origamid](https://www.origamid.com/certificate/9c1e95f0)
+
+---
+
+## 🚀 Projetos em Destaque
+
+- **Landing Page: Poco X6 Pro 5G**  
+  Criação da página de destaque do produto na loja oficial Xiaomi, com foco em responsividade e identidade visual da marca.
+
+- **[O Profeta Diário](https://github.com/HerbertSousa/o-profeta-diario)**  
+  Página fictícia inspirada no universo de Harry Potter, desenvolvida com HTML, CSS e JavaScript. Layout editorial com foco em tipografia e imersão visual.
+
+- *(adicione outros projetos com links, se quiser)*
+
+---
+
+## 🛠️ Tecnologias e Ferramentas
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)
+![Adobe XD](https://img.shields.io/badge/Adobe%20XD-FF61F6?style=flat&logo=adobexd&logoColor=white)
+![Liquid](https://img.shields.io/badge/Liquid-000000?style=flat&logo=shopify&logoColor=white)
+
+---
+
+## 📫 Vamos conversar?
+
+📍 [LinkedIn](https://www.linkedin.com/in/herbertsousa/)  
+📧 herbertsousa.dev@gmail.com  
+🌐 [Portfólio (em construção)](https://github.com/HerbertSousa)
+
+---
+
+⭐ Obrigado por visitar meu perfil!
