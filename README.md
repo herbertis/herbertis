@@ -22,7 +22,7 @@ Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commer
 
 ## 📜 Certificações
 
-- [Google UX Design – Coursera / Google](https://www.coursera.org/account/accomplishments/specialization/certificate/...)
+- [Google UX Design – Coursera / Google](https://www.credly.com/badges/b4ce38ba-a4ca-4efd-9520-ceb912a8a743/linked_in_profile)
 - [HTML e CSS para Iniciantes – Origamid](https://www.origamid.com/certificate/9c1e95f0)
 - 
 ---
