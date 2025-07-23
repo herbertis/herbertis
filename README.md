@@ -7,6 +7,7 @@ Tenho domínio em ferramentas como Adobe Photoshop, Illustrator, Figma e Adobe X
 Sou movido por desafios, aprendizado constante e a busca por criar soluções digitais que unam estética, usabilidade e performance. Em cada projeto, meu foco é entregar interfaces responsivas, acessíveis e alinhadas às necessidades do usuário.
 
 <div style="display: inline_block"><br>
+  <img align="center" alt="herbert-react" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
   <img align="center" alt="herbert-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="herbert-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="herbert-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">   
