@@ -24,19 +24,7 @@ Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commer
 
 - [Google UX Design – Coursera / Google](https://www.coursera.org/account/accomplishments/specialization/certificate/...)
 - [HTML e CSS para Iniciantes – Origamid](https://www.origamid.com/certificate/9c1e95f0)
-
----
-
-## 🚀 Projetos em Destaque
-
-- **Landing Page: Poco X6 Pro 5G**  
-  Criação da página de destaque do produto na loja oficial Xiaomi, com foco em responsividade e identidade visual da marca.
-
-- **[O Profeta Diário](https://github.com/HerbertSousa/o-profeta-diario)**  
-  Página fictícia inspirada no universo de Harry Potter, desenvolvida com HTML, CSS e JavaScript. Layout editorial com foco em tipografia e imersão visual.
-
-- *(adicione outros projetos com links, se quiser)*
-
+- 
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
@@ -54,7 +42,7 @@ Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commer
 ## 📫 Vamos conversar?
 
 📍 [LinkedIn](https://www.linkedin.com/in/herbertsousa/)  
-📧 herbertsousa.dev@gmail.com  
+📧 herbertis@icloud.com
 🌐 [Portfólio (em construção)](https://github.com/HerbertSousa)
 
 ---
