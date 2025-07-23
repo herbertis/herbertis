@@ -10,7 +10,7 @@ Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commer
 
 - **Centro Universitário FAM**  
   *Curso Superior de Tecnologia em Design Gráfico e Digital*  
-  📆 2022 – Jul/2025 (em andamento)  
+  📆 2022 – Jul/2025  
   Disciplinas: Design Digital, Design Gráfico, Produção Multimídia.
 
 - **IFSULDEMINAS – Instituto Federal do Sul de Minas Gerais**  
@@ -22,9 +22,8 @@ Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commer
 
 ## 📜 Certificações
 
-- [Google UX Design – Coursera / Google](https://www.credly.com/badges/b4ce38ba-a4ca-4efd-9520-ceb912a8a743/linked_in_profile)
-- [HTML e CSS para Iniciantes – Origamid](https://www.origamid.com/certificate/9c1e95f0)
-- 
+- [Google UX Design – Google](https://www.credly.com/badges/b4ce38ba-a4ca-4efd-9520-ceb912a8a743/linked_in_profile)
+- [Web Design Completo – Origamid](https://www.origamid.com/certificate/9c1e95f0)
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
@@ -35,6 +34,7 @@ Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commer
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)
 ![Adobe XD](https://img.shields.io/badge/Adobe%20XD-FF61F6?style=flat&logo=adobexd&logoColor=white)
+![Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=flat&logo=adobephotoshop&logoColor=white)
 ![Liquid](https://img.shields.io/badge/Liquid-000000?style=flat&logo=shopify&logoColor=white)
 
 ---
@@ -43,7 +43,7 @@ Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commer
 
 📍 [LinkedIn](https://www.linkedin.com/in/herbertsousa/)  
 📧 herbertis@icloud.com
-🌐 [Portfólio (em construção)](https://github.com/HerbertSousa)
+🌐 [Portfólio (em construção)](https://github.com/herbertis)
 
 ---
 
