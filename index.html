@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbert Sousa | Product Designer & Front-end</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8; /* Sky Blue */
+            --accent-glow: rgba(56, 189, 248, 0.3);
+            --gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header --- */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            animation: fadeIn 1s ease-in;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 0 20px var(--accent-glow);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        /* Barra de Contato e Links */
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .contact-item {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            padding: 6px 12px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid transparent;
+        }
+
+        .contact-item:hover {
+            color: var(--accent);
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* --- Sections --- */
+        section {
+            margin-bottom: 40px;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+
+        /* --- Skills & Certs Tags --- */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        a.skill-tag:hover {
+            background: var(--accent);
+            color: var(--bg-color);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px var(--accent-glow);
+            cursor: pointer;
+        }
+
+        /* --- Experience Timeline --- */
+        .job-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid #334155;
+        }
+
+        .job-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .company {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+        }
+
+        .job-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+        }
+
+        ul {
+            list-style-position: inside;
+            color: #cbd5e1;
+        }
+        
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* --- FAB Button --- */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gradient);
+            color: white;
+            width: 56px; 
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            z-index: 1000;
+            border: none;
+        }
+
+        .fab:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+        }
+        
+        .fab i {
+            margin-top: 2px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 15px; }
+            .job-header { flex-direction: column; }
+            .contact-bar { flex-direction: column; align-items: center; gap: 10px; }
+        }
+
+        @media print {
+            body { background: white; color: black; }
+            section { border: none; box-shadow: none; padding: 0; margin-bottom: 20px; }
+            h1 { background: none; -webkit-text-fill-color: black; color: black; }
+            .skill-tag { border: 1px solid #000; color: #000; background: none; }
+            .fab { display: none; }
+            a { text-decoration: none; color: black; }
+            .contact-item { color: black; background: none; padding: 0; border: none; }
+            .profile-img { border-color: #ccc; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="perfil.jpeg" alt="Herbert Sousa" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Herbert+Sousa&background=38bdf8&color=fff&size=150'">
+            
+            <h1>Herbert Ishimura Sousa</h1>
+            <div class="subtitle">Product Designer UI/UX Sênior | Background em Front-end | Pós-graduando em Eng. de Software e IA</div>
+            
+            <div class="contact-bar">
+                <a href="tel:+5535998563410" class="contact-item"><i class="fas fa-phone"></i> (35) 99856-3410</a>
+                <a href="mailto:herbertis@icloud.com" class="contact-item"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/herbertsousa" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/herbertsousa" target="_blank" class="contact-item"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://behance.net/herbertsousa" target="_blank" class="contact-item"><i class="fab fa-behance"></i> Behance</a>
+                <span class="contact-item"><i class="fas fa-map-marker-alt"></i> Santa Rita do Sapucaí, MG</span>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2><i class="fas fa-user-astronaut"></i> Sobre</h2>
+            <p>
+                Com mais de 7 anos de experiência em Design Digital, atuo na intersecção estratégica entre <strong>Design, Tecnologia e Negócio</strong>. 
+                Minha abordagem "híbrida" combina a estética refinada do UI/UX com um background técnico sólido em Front-end.
+            </p>
+            <p>
+                Atualmente focado em utilizar <strong>Inteligência Artificial</strong> para otimizar fluxos de trabalho e criar produtos escaláveis. 
+                Meu diferencial é "falar a língua dos devs", garantindo viabilidade técnica desde o primeiro wireframe até o handoff final.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fas fa-code"></i> Tech Stack & Ferramentas</h2>
+            
+            <div style="margin-bottom: 15px; color: var(--text-secondary); font-size: 0.9rem; font-weight: bold;">DESIGN & UX</div>
+            <div class="skills-grid" style="margin-bottom: 20px;">
+                <span class="skill-tag">Figma (Adv + AI)</span>
+                <span class="skill-tag">Adobe XD</span>
+                <span class="skill-tag">Design Systems</span>
+                <span class="skill-tag">Prototyping</span>
+                <span class="skill-tag">User Flows</span>
+                <span class="skill-tag">Wireframing</span>
+            </div>
+
+            <div style="margin-bottom: 15px; color: var(--text-secondary); font-size: 0.9rem; font-weight: bold;">FRONT-END & TECH</div>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5 / CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">ReactJS (Concepts)</span>
+                <span class="skill-tag">Liquid (Linx)</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Bootstrap</span>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">Front-End Developer (Foco em UI/UX)</span>
+                    <span class="date">Set 2021 – Presente</span>
+                </div>
+                <div class="company">DL Eletrônicos</div>
+                <p style="margin-top: 5px;">
+                    Atuação direta na sustentação e evolução dos canais oficiais da <strong>Xiaomi Brasil</strong> e <strong>Honor Brasil</strong>.
+                    <br>
+                    <span style="font-size: 0.85em; display: inline-block; margin-top: 5px;">
+                        <a href="https://www.mibrasil.com.br" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">www.mibrasil.com.br</a> 
+                        <span style="color: var(--text-secondary); margin: 0 5px;">|</span> 
+                        <a href="https://www.honor.com.br" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">www.honor.com.br</a>
+                    </span>
+                </p>
+                <ul>
+                    <li>Desenvolvimento de vitrines e landing pages responsivas utilizando <strong>Liquid</strong> na plataforma <strong>Linx</strong>.</li>
+                    <li>Criação de interfaces para dois grandes e-commerces, garantindo consistência visual e alta performance.</li>
+                    <li>Aplicação de HTML5, CSS3 e JavaScript para customização avançada de layouts e componentes.</li>
+                    <li>Colaboração com times de Design para garantir fidelidade visual e melhor experiência de compra (UX).</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">Designer Gráfico e Digital</span>
+                    <span class="date">Fev 2018 – Ago 2018</span>
+                </div>
+                <div class="company">Shéva Marketing Inteligente</div>
+                <ul>
+                    <li>Criação de identidade visual e peças de alta conversão para estratégias de Inbound Marketing.</li>
+                    <li>Design de newsletters e interfaces para campanhas digitais.</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">Designer Gráfico e Digital</span>
+                    <span class="date">Mai 2016 – Set 2017</span>
+                </div>
+                <div class="company">APLS Domínio em Capacitação</div>
+                <ul>
+                    <li>Desenvolvimento de apresentações corporativas estratégicas e materiais digitais de suporte à marca.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
+            
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">Pós-graduação em Engenharia de Software com ênfase em IA</span>
+                    <span class="date">Cursando</span>
+                </div>
+                <div class="company">PUC Minas</div>
+                <p>Foco na aplicação de IA no ciclo de desenvolvimento de produtos digitais.</p>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">Superior de Tecnologia em Design Gráfico e Digital</span>
+                    <span class="date">Conclusão: 2025</span>
+                </div>
+                <div class="company">FAM - Centro Universitário</div>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">Técnico em Desenvolvimento de Sistemas</span>
+                    <span class="date">Conclusão: 2022</span>
+                </div>
+                <div class="company">IFSuldeMinas</div>
+            </div>
+        </section>
+
+         <section id="certs">
+            <h2><i class="fas fa-certificate"></i> Certificações & Links</h2>
+            <div class="skills-grid">
+                
+                <a href="https://www.credly.com/badges/b4ce38ba-a4ca-4efd-9520-ceb912a8a743/linked_in_profile" target="_blank" class="skill-tag">
+                    <i class="fab fa-google"></i> Google UX Design Pro <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i>
+                </a>
+
+                <a href="https://app.rocketseat.com.br/certificates" target="_blank" class="skill-tag">
+                    <i class="fas fa-rocket"></i> Discover Rocketseat <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i>
+                </a>
+
+                <a href="https://www.origamid.com/certificate" target="_blank" class="skill-tag">
+                    <i class="fas fa-laptop-code"></i> Web Design Origamid <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i>
+                </a>
+
+                <a href="https://www.mergo.com.br/" target="_blank" class="skill-tag">
+                    <i class="fas fa-mobile-alt"></i> UI + Mobile (Mergo) <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i>
+                </a>
+
+            </div>
+        </section>
+
+        <footer>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 0.8rem;">
+                &copy; 2025 Herbert Ishimura Sousa. Coded by hand & AI assistance.
+            </p>
+        </footer>
+    </div>
+
+    <a href="javascript:window.print()" class="fab" title="Baixar PDF / Imprimir">
+        <i class="fas fa-print"></i>
+    </a>
+
+</body>
+</html>
