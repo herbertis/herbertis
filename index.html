@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
     
     <style>
         :root {
+            /* Variaveis Dark Mode (Padrão) */
             --bg-color: #0f172a;
             --card-bg: #1e293b;
             --text-primary: #f8fafc;
@@ -18,6 +19,23 @@
             --accent: #38bdf8; /* Sky Blue */
             --accent-glow: rgba(56, 189, 248, 0.3);
             --gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --border-color: rgba(255, 255, 255, 0.05);
+            --job-border: #334155;
+            --btn-bg: rgba(255,255,255,0.05);
+        }
+
+        /* Variaveis Light Mode */
+        [data-theme="light"] {
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --accent: #0284c7; /* Azul mais escuro para contraste no branco */
+            --accent-glow: rgba(2, 132, 199, 0.2);
+            --gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+            --border-color: rgba(0, 0, 0, 0.05);
+            --job-border: #e2e8f0;
+            --btn-bg: rgba(0,0,0,0.05);
         }
 
         * {
@@ -25,6 +43,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         body {
@@ -38,12 +57,48 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
+            padding-top: 60px; /* Espaço para os controles */
+        }
+
+        /* --- Controls (Language & Theme) --- */
+        .controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .control-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .control-btn:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .control-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
         }
 
         /* --- Header --- */
         header {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 40px 20px 40px;
             animation: fadeIn 1s ease-in;
             display: flex;
             flex-direction: column;
@@ -101,7 +156,7 @@
             transition: all 0.3s;
             padding: 6px 12px;
             border-radius: 8px;
-            background: rgba(255,255,255,0.03);
+            background: var(--btn-bg);
             border: 1px solid transparent;
         }
 
@@ -118,8 +173,8 @@
             background: var(--card-bg);
             padding: 30px;
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
 
         h2 {
@@ -133,7 +188,11 @@
 
         p {
             margin-bottom: 15px;
-            color: #cbd5e1;
+            color: var(--text-secondary); /* Ajustado para mudar no tema light */
+        }
+        
+        strong {
+            color: var(--text-primary);
         }
 
         /* --- Skills & Certs Tags --- */
@@ -160,7 +219,7 @@
 
         a.skill-tag:hover {
             background: var(--accent);
-            color: var(--bg-color);
+            color: var(--bg-color); /* No light mode vira branco, no dark vira escuro */
             transform: translateY(-2px);
             box-shadow: 0 0 15px var(--accent-glow);
             cursor: pointer;
@@ -171,7 +230,7 @@
             margin-bottom: 30px;
             position: relative;
             padding-left: 20px;
-            border-left: 2px solid #334155;
+            border-left: 2px solid var(--job-border);
         }
 
         .job-item:last-child {
@@ -189,7 +248,7 @@
         .job-title {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .company {
@@ -212,12 +271,12 @@
             height: 10px;
             border-radius: 50%;
             background: var(--accent);
-            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+            box-shadow: 0 0 0 4px var(--bg-color); /* Borda dinamica para cortar a linha */
         }
 
         ul {
             list-style-position: inside;
-            color: #cbd5e1;
+            color: var(--text-secondary);
         }
         
         li {
@@ -262,31 +321,43 @@
 
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
-            .container { padding: 15px; }
+            .container { padding: 15px; padding-top: 60px; }
             .job-header { flex-direction: column; }
             .contact-bar { flex-direction: column; align-items: center; gap: 10px; }
+            .controls { top: 15px; right: 15px; }
         }
 
         @media print {
             body { background: white; color: black; }
-            section { border: none; box-shadow: none; padding: 0; margin-bottom: 20px; }
+            .controls { display: none; }
+            section { border: none; box-shadow: none; padding: 0; margin-bottom: 20px; page-break-inside: avoid; }
             h1 { background: none; -webkit-text-fill-color: black; color: black; }
             .skill-tag { border: 1px solid #000; color: #000; background: none; }
             .fab { display: none; }
             a { text-decoration: none; color: black; }
             .contact-item { color: black; background: none; padding: 0; border: none; }
             .profile-img { border-color: #ccc; box-shadow: none; }
+            p, li, strong { color: black !important; }
         }
     </style>
 </head>
 <body>
 
+    <div class="controls">
+        <button class="control-btn" id="langToggle" title="Switch Language">
+            🇺🇸 EN
+        </button>
+        <button class="control-btn" id="themeToggle" title="Switch Theme">
+            ☀️ Light
+        </button>
+    </div>
+
     <div class="container">
         <header>
-            <img src="eu.jpeg" alt="Herbert Sousa" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Herbert+Sousa&background=38bdf8&color=fff&size=150'">
+            <img src="perfil.jpg" alt="Herbert Sousa" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Herbert+Sousa&background=38bdf8&color=fff&size=150'">
             
             <h1>Herbert Ishimura Sousa</h1>
-            <div class="subtitle">Product Designer UI/UX Sênior | Background em Front-end | Pós-graduando em Eng. de Software e IA</div>
+            <div class="subtitle" data-i18n="role">Product Designer UI/UX Sênior | Background em Front-end | Pós-graduando em Eng. de Software e IA</div>
             
             <div class="contact-bar">
                 <a href="tel:+5535998563410" class="contact-item"><i class="fas fa-phone"></i> (35) 99856-3410</a>
@@ -299,19 +370,19 @@
         </header>
 
         <section id="about">
-            <h2><i class="fas fa-user-astronaut"></i> Sobre</h2>
-            <p>
+            <h2><i class="fas fa-user-astronaut"></i> <span data-i18n="about_title">Sobre</span></h2>
+            <p data-i18n="about_p1">
                 Com mais de 7 anos de experiência em Design Digital, atuo na intersecção estratégica entre <strong>Design, Tecnologia e Negócio</strong>. 
                 Minha abordagem "híbrida" combina a estética refinada do UI/UX com um background técnico sólido em Front-end.
             </p>
-            <p>
+            <p data-i18n="about_p2">
                 Atualmente focado em utilizar <strong>Inteligência Artificial</strong> para otimizar fluxos de trabalho e criar produtos escaláveis. 
                 Meu diferencial é "falar a língua dos devs", garantindo viabilidade técnica desde o primeiro wireframe até o handoff final.
             </p>
         </section>
 
         <section id="skills">
-            <h2><i class="fas fa-code"></i> Tech Stack & Ferramentas</h2>
+            <h2><i class="fas fa-code"></i> Tech Stack & Tools</h2>
             
             <div style="margin-bottom: 15px; color: var(--text-secondary); font-size: 0.9rem; font-weight: bold;">DESIGN & UX</div>
             <div class="skills-grid" style="margin-bottom: 20px;">
@@ -335,16 +406,16 @@
         </section>
 
         <section id="experience">
-            <h2><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+            <h2><i class="fas fa-briefcase"></i> <span data-i18n="exp_title">Experiência Profissional</span></h2>
 
             <div class="job-item">
                 <div class="job-header">
-                    <span class="job-title">Front-End Developer (Foco em UI/UX)</span>
-                    <span class="date">Set 2021 – Presente</span>
+                    <span class="job-title" data-i18n="job1_title">Front-End Developer (Foco em UI/UX)</span>
+                    <span class="date" data-i18n="job1_date">Set 2021 – Presente</span>
                 </div>
                 <div class="company">DL Eletrônicos</div>
                 <p style="margin-top: 5px;">
-                    Atuação direta na sustentação e evolução dos canais oficiais da <strong>Xiaomi Brasil</strong> e <strong>Honor Brasil</strong>.
+                    <span data-i18n="job1_desc">Atuação direta na sustentação e evolução dos canais oficiais da <strong>Xiaomi Brasil</strong> e <strong>Honor Brasil</strong>.</span>
                     <br>
                     <span style="font-size: 0.85em; display: inline-block; margin-top: 5px;">
                         <a href="https://www.mibrasil.com.br" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">www.mibrasil.com.br</a> 
@@ -352,7 +423,7 @@
                         <a href="https://www.honor.com.br" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">www.honor.com.br</a>
                     </span>
                 </p>
-                <ul>
+                <ul data-i18n="job1_bullets">
                     <li>Desenvolvimento de vitrines e landing pages responsivas utilizando <strong>Liquid</strong> na plataforma <strong>Linx</strong>.</li>
                     <li>Criação de interfaces para dois grandes e-commerces, garantindo consistência visual e alta performance.</li>
                     <li>Aplicação de HTML5, CSS3 e JavaScript para customização avançada de layouts e componentes.</li>
@@ -362,11 +433,11 @@
 
             <div class="job-item">
                 <div class="job-header">
-                    <span class="job-title">Designer Gráfico e Digital</span>
-                    <span class="date">Fev 2018 – Ago 2018</span>
+                    <span class="job-title" data-i18n="job2_title">Designer Gráfico e Digital</span>
+                    <span class="date" data-i18n="job2_date">Fev 2018 – Ago 2018</span>
                 </div>
                 <div class="company">Shéva Marketing Inteligente</div>
-                <ul>
+                <ul data-i18n="job2_bullets">
                     <li>Criação de identidade visual e peças de alta conversão para estratégias de Inbound Marketing.</li>
                     <li>Design de newsletters e interfaces para campanhas digitais.</li>
                 </ul>
@@ -374,47 +445,47 @@
 
             <div class="job-item">
                 <div class="job-header">
-                    <span class="job-title">Designer Gráfico e Digital</span>
-                    <span class="date">Mai 2016 – Set 2017</span>
+                    <span class="job-title" data-i18n="job3_title">Designer Gráfico e Digital</span>
+                    <span class="date" data-i18n="job3_date">Mai 2016 – Set 2017</span>
                 </div>
                 <div class="company">APLS Domínio em Capacitação</div>
-                <ul>
+                <ul data-i18n="job3_bullets">
                     <li>Desenvolvimento de apresentações corporativas estratégicas e materiais digitais de suporte à marca.</li>
                 </ul>
             </div>
         </section>
 
         <section id="education">
-            <h2><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
+            <h2><i class="fas fa-graduation-cap"></i> <span data-i18n="edu_title">Formação Acadêmica</span></h2>
             
             <div class="job-item">
                 <div class="job-header">
-                    <span class="job-title">Pós-graduação em Engenharia de Software com ênfase em IA</span>
-                    <span class="date">Cursando</span>
+                    <span class="job-title" data-i18n="edu1_title">Pós-graduação em Engenharia de Software com ênfase em IA</span>
+                    <span class="date" data-i18n="edu1_date">Cursando</span>
                 </div>
                 <div class="company">PUC Minas</div>
-                <p>Foco na aplicação de IA no ciclo de desenvolvimento de produtos digitais.</p>
+                <p data-i18n="edu1_desc">Foco na aplicação de IA no ciclo de desenvolvimento de produtos digitais.</p>
             </div>
 
             <div class="job-item">
                 <div class="job-header">
-                    <span class="job-title">Superior de Tecnologia em Design Gráfico e Digital</span>
-                    <span class="date">Conclusão: 2025</span>
+                    <span class="job-title" data-i18n="edu2_title">Superior de Tecnologia em Design Gráfico e Digital</span>
+                    <span class="date" data-i18n="edu2_date">Conclusão: 2025</span>
                 </div>
                 <div class="company">FAM - Centro Universitário</div>
             </div>
 
             <div class="job-item">
                 <div class="job-header">
-                    <span class="job-title">Técnico em Desenvolvimento de Sistemas</span>
-                    <span class="date">Conclusão: 2022</span>
+                    <span class="job-title" data-i18n="edu3_title">Técnico em Desenvolvimento de Sistemas</span>
+                    <span class="date" data-i18n="edu3_date">Conclusão: 2022</span>
                 </div>
                 <div class="company">IFSuldeMinas</div>
             </div>
         </section>
 
          <section id="certs">
-            <h2><i class="fas fa-certificate"></i> Certificações & Links</h2>
+            <h2><i class="fas fa-certificate"></i> <span data-i18n="cert_title">Certificações & Links</span></h2>
             <div class="skills-grid">
                 
                 <a href="https://www.credly.com/badges/b4ce38ba-a4ca-4efd-9520-ceb912a8a743/linked_in_profile" target="_blank" class="skill-tag">
@@ -443,9 +514,107 @@
         </footer>
     </div>
 
-    <a href="javascript:window.print()" class="fab" title="Baixar PDF / Imprimir">
+    <a href="javascript:window.print()" class="fab" title="Imprimir / Print">
         <i class="fas fa-print"></i>
     </a>
+
+    <script>
+        const translations = {
+            pt: {
+                role: "Product Designer UI/UX Sênior | Background em Front-end | Pós-graduando em Eng. de Software e IA",
+                about_title: "Sobre",
+                about_p1: "Com mais de 7 anos de experiência em Design Digital, atuo na intersecção estratégica entre <strong>Design, Tecnologia e Negócio</strong>. Minha abordagem 'híbrida' combina a estética refinada do UI/UX com um background técnico sólido em Front-end.",
+                about_p2: "Atualmente focado em utilizar <strong>Inteligência Artificial</strong> para otimizar fluxos de trabalho e criar produtos escaláveis. Meu diferencial é 'falar a língua dos devs', garantindo viabilidade técnica desde o primeiro wireframe até o handoff final.",
+                exp_title: "Experiência Profissional",
+                job1_title: "Front-End Developer (Foco em UI/UX)",
+                job1_date: "Set 2021 – Presente",
+                job1_desc: "Atuação direta na sustentação e evolução dos canais oficiais da <strong>Xiaomi Brasil</strong> e <strong>Honor Brasil</strong>.",
+                job1_bullets: "<li>Desenvolvimento de vitrines e landing pages responsivas utilizando <strong>Liquid</strong> na plataforma <strong>Linx</strong>.</li><li>Criação de interfaces para dois grandes e-commerces, garantindo consistência visual e alta performance.</li><li>Aplicação de HTML5, CSS3 e JavaScript para customização avançada de layouts e componentes.</li><li>Colaboração com times de Design para garantir fidelidade visual e melhor experiência de compra (UX).</li>",
+                job2_title: "Designer Gráfico e Digital",
+                job2_date: "Fev 2018 – Ago 2018",
+                job2_bullets: "<li>Criação de identidade visual e peças de alta conversão para estratégias de Inbound Marketing.</li><li>Design de newsletters e interfaces para campanhas digitais.</li>",
+                job3_title: "Designer Gráfico e Digital",
+                job3_date: "Mai 2016 – Set 2017",
+                job3_bullets: "<li>Desenvolvimento de apresentações corporativas estratégicas e materiais digitais de suporte à marca.</li>",
+                edu_title: "Formação Acadêmica",
+                edu1_title: "Pós-graduação em Engenharia de Software com ênfase em IA",
+                edu1_date: "Cursando",
+                edu1_desc: "Foco na aplicação de IA no ciclo de desenvolvimento de produtos digitais.",
+                edu2_title: "Superior de Tecnologia em Design Gráfico e Digital",
+                edu2_date: "Conclusão: 2025",
+                edu3_title: "Técnico em Desenvolvimento de Sistemas",
+                edu3_date: "Conclusão: 2022",
+                cert_title: "Certificações & Links"
+            },
+            en: {
+                role: "Senior Product Designer UI/UX | Front-end Background | Software Engineering & AI Postgraduate",
+                about_title: "About",
+                about_p1: "With over 7 years of experience in Digital Design, I operate at the strategic intersection of <strong>Design, Technology, and Business</strong>. My 'hybrid' approach combines the refined aesthetics of UI/UX with a solid technical background in Front-end development.",
+                about_p2: "Currently focused on leveraging <strong>Artificial Intelligence</strong> to optimize workflows and build scalable products. My key differentiator is 'speaking the developers' language', ensuring technical feasibility from the very first wireframe to the final handoff.",
+                exp_title: "Professional Experience",
+                job1_title: "Front-End Developer (UI/UX Focus)",
+                job1_date: "Sep 2021 – Present",
+                job1_desc: "Direct involvement in the maintenance and evolution of the official channels for <strong>Xiaomi Brazil</strong> and <strong>Honor Brazil</strong>.",
+                job1_bullets: "<li>Development of responsive storefronts and landing pages using <strong>Liquid</strong> on the <strong>Linx</strong> platform.</li><li>Creation of interfaces for two major e-commerce sites, ensuring visual consistency and high performance.</li><li>Application of HTML5, CSS3, and JavaScript for advanced customization of layouts and components.</li><li>Collaboration with Design teams to ensure visual fidelity and an enhanced shopping experience (UX).</li>",
+                job2_title: "Graphic & Digital Designer",
+                job2_date: "Feb 2018 – Aug 2018",
+                job2_bullets: "<li>Creation of visual identity and high-conversion assets for Inbound Marketing strategies.</li><li>Design of newsletters and interfaces for digital campaigns.</li>",
+                job3_title: "Graphic & Digital Designer",
+                job3_date: "May 2016 – Sep 2017",
+                job3_bullets: "<li>Development of strategic corporate presentations and digital brand support materials.</li>",
+                edu_title: "Education",
+                edu1_title: "Postgraduate in Software Engineering with focus on AI",
+                edu1_date: "In Progress",
+                edu1_desc: "Focus on applying AI within the digital product development lifecycle.",
+                edu2_title: "Technologist Degree in Graphic & Digital Design",
+                edu2_date: "Conclusion: 2025",
+                edu3_title: "Systems Development Technician",
+                edu3_date: "Conclusion: 2022",
+                cert_title: "Certifications & Links"
+            }
+        };
+
+        const langToggleBtn = document.getElementById('langToggle');
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        // --- Theme Logic ---
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+        applyTheme(currentTheme);
+
+        themeToggleBtn.addEventListener('click', () => {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(currentTheme);
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        function applyTheme(theme) {
+            htmlElement.setAttribute('data-theme', theme);
+            themeToggleBtn.innerText = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
+        }
+
+        // --- Language Logic ---
+        let currentLang = localStorage.getItem('lang') || 'pt';
+        applyLanguage(currentLang);
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            applyLanguage(currentLang);
+            localStorage.setItem('lang', currentLang);
+        });
+
+        function applyLanguage(lang) {
+            langToggleBtn.innerText = lang === 'pt' ? '🇺🇸 EN' : '🇧🇷 PT';
+            
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key]; // Use innerHTML to keep tags like <strong>
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
