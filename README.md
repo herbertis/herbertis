@@ -1,8 +1,12 @@
 # 👋 Olá! Eu sou Herbert Ishimura Sousa
 
-Sou um **Front-end Developer Pleno** com mais de **7 anos de experiência em design digital**, atuando na criação de **interfaces responsivas, funcionais e visualmente impactantes** para web e mobile. Tenho paixão por unir **design, usabilidade e código**, criando soluções que realmente fazem a diferença na experiência do usuário.
+Minha paixão reside em transformar ideias em experiências digitais impactantes. Atuo como desenvolvedor Front-end, com foco em e-commerce e tecnologia, onde tive a oportunidade de criar landing pages e interfaces para grandes marcas como Xiaomi e Honor no Brasil, impulsionando a presença digital e a interação do usuário.
 
-Atualmente, desenvolvo **landing pages e páginas promocionais** para o e-commerce oficial da **Xiaomi Brasil**, com forte atuação em tecnologias como **HTML5, CSS3, JavaScript e Liquid**, utilizando a plataforma **Linx**.
+Desenvolvi interfaces complexas na plataforma Linx, garantindo consistência visual e funcionalidade. Trabalhei na sustentação e evolução do Front-end para os canais oficiais Xiaomi e Honor, utilizando HTML5, CSS3 e JavaScript para melhorar a Experiência do Usuário (UX) em e-commerces de grande porte.
+
+Otimizei o processo de implementação técnica na plataforma Linx, atuando como ponte entre o design visual e o desenvolvimento Front-end para projetos como www.mibrasil.com.br e www.honor.com.br. Minha colaboração com equipes multifuncionais reduziu inconsistências visuais e técnicas, assegurando a melhoria contínua da experiência de compra.
+
+Estou em constante aprimoramento, com o Google UX Design Professional Certificate, e certificações em UI + Mobile pela Mergo Escola de Design. Minhas competências incluem JavaScript, Desenvolvimento de Front-end, CSS3, Git, GitHub e HTML5, além de fluência em português e inglês.
 
 ---
 
