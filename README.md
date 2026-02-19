@@ -47,7 +47,6 @@ Estou em constante aprimoramento, com o Google UX Design Professional Certificat
 
 📍 [LinkedIn](https://www.linkedin.com/in/herbertsousa/)  
 📧 herbertis@icloud.com
-🌐 [Portfólio (em construção)](https://github.com/herbertis)
 
 ---
 
