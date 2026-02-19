@@ -10,6 +10,11 @@ Estou em constante aprimoramento, com o Google UX Design Professional Certificat
 
 ---
 
+## Currículo Online:
+https://herbertis.github.io/herbertis/
+
+---
+
 ## 🎓 Formação Acadêmica
 
 - **Centro Universitário FAM**  
@@ -28,6 +33,7 @@ Estou em constante aprimoramento, com o Google UX Design Professional Certificat
 
 - [Google UX Design – Google](https://www.credly.com/badges/b4ce38ba-a4ca-4efd-9520-ceb912a8a743/linked_in_profile)
 - [Web Design Completo – Origamid](https://www.origamid.com/certificate/9c1e95f0)
+  
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
