@@ -327,18 +327,140 @@
             .controls { top: 15px; right: 15px; }
         }
 
-        @media print {
-            body { background: white; color: black; }
-            .controls { display: none; }
-            section { border: none; box-shadow: none; padding: 0; margin-bottom: 20px; page-break-inside: avoid; }
-            h1 { background: none; -webkit-text-fill-color: black; color: black; }
-            .skill-tag { border: 1px solid #000; color: #000; background: none; }
-            .fab { display: none; }
-            a { text-decoration: none; color: black; }
-            .contact-item { color: black; background: none; padding: 0; border: none; }
-            .profile-img { border-color: #ccc; box-shadow: none; }
-            p, li, strong { color: black !important; }
-        }
+       @media print {
+
+    /* Define página A4 */
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    html, body {
+        width: 210mm;
+        height: auto;
+        background: white !important;
+        color: black !important;
+        font-size: 11pt;
+        line-height: 1.4;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Remove elementos desnecessários */
+    .controls,
+    .fab {
+        display: none !important;
+    }
+
+    /* Header mais compacto */
+    header {
+        padding: 0;
+        margin-bottom: 12px;
+    }
+
+    .profile-img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    h1 {
+        font-size: 20pt;
+        margin-bottom: 4px;
+        background: none;
+        -webkit-text-fill-color: black;
+        color: black;
+    }
+
+    .subtitle {
+        font-size: 11pt;
+        margin-bottom: 6px;
+        color: black;
+    }
+
+    .contact-bar {
+        gap: 8px;
+    }
+
+    .contact-item {
+        font-size: 10pt;
+        padding: 0;
+        background: none;
+        border: none;
+        color: black;
+    }
+
+    /* Seções compactas */
+    section {
+        padding: 0;
+        margin-bottom: 12px;
+        border: none;
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+
+    h2 {
+        font-size: 13pt;
+        margin-bottom: 6px;
+        color: black;
+    }
+
+    p {
+        font-size: 10.5pt;
+        margin-bottom: 6px;
+        color: black;
+    }
+
+    ul {
+        margin-top: 4px;
+        margin-bottom: 6px;
+    }
+
+    li {
+        font-size: 10.5pt;
+        margin-bottom: 3px;
+    }
+
+    /* Skills mais compactos */
+    .skills-grid {
+        gap: 6px;
+    }
+
+    .skill-tag {
+        font-size: 9pt;
+        padding: 3px 8px;
+        border: 1px solid #000;
+        background: none;
+        color: black;
+    }
+
+    /* Experiência */
+    .job-item {
+        margin-bottom: 8px;
+        padding-left: 10px;
+    }
+
+    .job-title {
+        font-size: 11pt;
+    }
+
+    .date {
+        font-size: 9pt;
+    }
+
+    footer {
+        margin-top: 10px;
+        font-size: 9pt;
+    }
+
+}
+
     </style>
 </head>
 <body>
