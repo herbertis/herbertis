@@ -1,3 +1,14 @@
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mobile Product Landing Page | UI Engineer Project">
+<meta property="og:description" content="Landing page responsiva focada em UX, performance e interface moderna. Projeto front-end desenvolvido com HTML, CSS e JavaScript.">
+<meta property="og:url" content="https://herbertis.github.io/honor-x6b-5g-page/">
+<meta property="og:image" content="https://herbertis.github.io/honor-x6b-5g-page/preview.jpg">
+<!-- SEO básico -->
+<meta name="description" content="Projeto de landing page responsiva focado em UX, performance e interfaces modernas. Desenvolvido por Herbert Sousa, UI Engineer e Front-end Developer.">
+<meta name="author" content="Herbert Sousa">
+
+
 # 👋 Olá! Eu sou Herbert Ishimura Sousa
 
 Minha paixão reside em transformar ideias em experiências digitais impactantes. Atuo como desenvolvedor Front-end, com foco em e-commerce e tecnologia, onde tive a oportunidade de criar landing pages e interfaces para grandes marcas como Xiaomi e Honor no Brasil, impulsionando a presença digital e a interação do usuário.
