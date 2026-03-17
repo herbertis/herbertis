@@ -327,11 +327,12 @@
             .controls { top: 15px; right: 15px; }
         }
 
-        .projects-grid {
+.projects-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     gap: 20px;
 }
+
 
 .project-card {
     background: var(--card-bg);
