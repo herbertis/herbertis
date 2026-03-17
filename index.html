@@ -682,60 +682,124 @@ Experiência como ponte entre design e desenvolvimento, garantindo viabilidade t
     </a>
 
     <script>
-        const translations = {
-            pt: {
-                role: "UI Engineer | Product Design & Front-end | React, JavaScript, HTML, CSS | Design Systems | UX/UI | AI-Driven Interfaces | Pós-graduando em Eng. de Software e IA",
-                about_title: "Sobre",
-                about_p1: "Com mais de 7 anos de experiência em Design Digital, atuo na intersecção estratégica entre <strong>Design, Tecnologia e Negócio</strong>. Minha abordagem 'híbrida' combina a estética refinada do UI/UX com um background técnico sólido em Front-end.",
-                about_p2: "Atualmente focado em utilizar <strong>Inteligência Artificial</strong> para otimizar fluxos de trabalho e criar produtos escaláveis. Meu diferencial é 'falar a língua dos devs', garantindo viabilidade técnica desde o primeiro wireframe até o handoff final.",
-                exp_title: "Experiência Profissional",
-                job1_title: "Front-End Developer (Foco em UI/UX)",
-                job1_date: "Set 2021 – Presente",
-                job1_desc: "Atuação direta na sustentação e evolução dos canais oficiais da <strong>Xiaomi Brasil</strong> e <strong>Honor Brasil</strong>.",
-                job1_bullets: "<li>Desenvolvimento de vitrines e landing pages responsivas utilizando <strong>Liquid</strong> na plataforma <strong>Linx</strong>.</li><li>Criação de interfaces para dois grandes e-commerces, garantindo consistência visual e alta performance.</li><li>Aplicação de HTML5, CSS3 e JavaScript para customização avançada de layouts e componentes.</li><li>Colaboração com times de Design para garantir fidelidade visual e melhor experiência de compra (UX).</li>",
-                job2_title: "Designer Gráfico e Digital",
-                job2_date: "Fev 2018 – Ago 2018",
-                job2_bullets: "<li>Criação de identidade visual e peças de alta conversão para estratégias de Inbound Marketing.</li><li>Design de newsletters e interfaces para campanhas digitais.</li>",
-                job3_title: "Designer Gráfico e Digital",
-                job3_date: "Mai 2016 – Set 2017",
-                job3_bullets: "<li>Desenvolvimento de apresentações corporativas estratégicas e materiais digitais de suporte à marca.</li>",
-                edu_title: "Formação Acadêmica",
-                edu1_title: "Pós-graduação em Engenharia de Software com ênfase em IA",
-                edu1_date: "Cursando",
-                edu1_desc: "Foco na aplicação de IA no ciclo de desenvolvimento de produtos digitais.",
-                edu2_title: "Superior de Tecnologia em Design Gráfico e Digital",
-                edu2_date: "Conclusão: 2025",
-                edu3_title: "Técnico em Desenvolvimento de Sistemas",
-                edu3_date: "Conclusão: 2022",
-                cert_title: "Certificações & Links"
-            },
-            en: {
-                role: "Senior Product Designer UI/UX | Front-end Background | Software Engineering & AI Postgraduate",
-                about_title: "About",
-                about_p1: "With over 7 years of experience in Digital Design, I operate at the strategic intersection of <strong>Design, Technology, and Business</strong>. My 'hybrid' approach combines the refined aesthetics of UI/UX with a solid technical background in Front-end development.",
-                about_p2: "Currently focused on leveraging <strong>Artificial Intelligence</strong> to optimize workflows and build scalable products. My key differentiator is 'speaking the developers' language', ensuring technical feasibility from the very first wireframe to the final handoff.",
-                exp_title: "Professional Experience",
-                job1_title: "Front-End Developer (UI/UX Focus)",
-                job1_date: "Sep 2021 – Present",
-                job1_desc: "Direct involvement in the maintenance and evolution of the official channels for <strong>Xiaomi Brazil</strong> and <strong>Honor Brazil</strong>.",
-                job1_bullets: "<li>Development of responsive storefronts and landing pages using <strong>Liquid</strong> on the <strong>Linx</strong> platform.</li><li>Creation of interfaces for two major e-commerce sites, ensuring visual consistency and high performance.</li><li>Application of HTML5, CSS3, and JavaScript for advanced customization of layouts and components.</li><li>Collaboration with Design teams to ensure visual fidelity and an enhanced shopping experience (UX).</li>",
-                job2_title: "Graphic & Digital Designer",
-                job2_date: "Feb 2018 – Aug 2018",
-                job2_bullets: "<li>Creation of visual identity and high-conversion assets for Inbound Marketing strategies.</li><li>Design of newsletters and interfaces for digital campaigns.</li>",
-                job3_title: "Graphic & Digital Designer",
-                job3_date: "May 2016 – Sep 2017",
-                job3_bullets: "<li>Development of strategic corporate presentations and digital brand support materials.</li>",
-                edu_title: "Education",
-                edu1_title: "Postgraduate in Software Engineering with focus on AI",
-                edu1_date: "In Progress",
-                edu1_desc: "Focus on applying AI within the digital product development lifecycle.",
-                edu2_title: "Technologist Degree in Graphic & Digital Design",
-                edu2_date: "Conclusion: 2025",
-                edu3_title: "Systems Development Technician",
-                edu3_date: "Conclusion: 2022",
-                cert_title: "Certifications & Links"
-            }
-        };
+ const translations = {
+    pt: {
+        role: "UI Engineer | Front-end Developer (React) | JavaScript | Design Systems | UX/UI | Interfaces com IA",
+
+        about_title: "Sobre",
+
+        about_p1: `
+        Front-end Developer com experiência em desenvolvimento de interfaces para <strong>e-commerce de grande escala</strong>, atuando na criação de landing pages e aplicações web para marcas como <strong>Xiaomi</strong> e <strong>Honor</strong> no Brasil.<br><br>
+
+        Experiência prática com <strong>React, JavaScript, HTML5, CSS3 e Git</strong>, com foco em performance, responsividade e experiência do usuário (UX). Atuação na plataforma <strong>Linx</strong>, desenvolvendo interfaces escaláveis e garantindo consistência visual e funcional.<br><br>
+
+        Responsável pela sustentação e evolução do front-end de canais oficiais, colaborando com times de design e produto para integrar <strong>UI/UX, Design Systems e desenvolvimento</strong>, reduzindo inconsistências e melhorando a experiência de compra.
+        `,
+
+        about_p2: `
+        Atualmente focado em aplicar <strong>Inteligência Artificial</strong> no desenvolvimento de interfaces e otimização de fluxos de trabalho. 
+        Meu diferencial é atuar como ponte entre design e desenvolvimento, garantindo viabilidade técnica desde o primeiro wireframe até a implementação final.
+        `,
+
+        exp_title: "Experiência Profissional",
+
+        job1_title: "Front-End Developer (UI/UX)",
+        job1_date: "Set 2021 – Presente",
+        job1_desc: "Atuação direta na sustentação e evolução dos canais oficiais da <strong>Xiaomi Brasil</strong> e <strong>Honor Brasil</strong>.",
+
+        job1_bullets: `
+        <li>Desenvolvimento de vitrines e landing pages responsivas utilizando <strong>Liquid</strong> na plataforma <strong>Linx</strong>.</li>
+        <li>Criação de interfaces para e-commerces de grande escala, garantindo consistência visual e alta performance.</li>
+        <li>Implementação com <strong>HTML5, CSS3 e JavaScript</strong> para customização avançada de layouts e componentes.</li>
+        <li>Colaboração com times de Design e Produto para garantir fidelidade visual e melhor experiência do usuário (UX).</li>
+        `,
+
+        job2_title: "Designer Gráfico e Digital",
+        job2_date: "Fev 2018 – Ago 2018",
+        job2_bullets: `
+        <li>Criação de identidade visual e peças focadas em conversão para estratégias de Inbound Marketing.</li>
+        <li>Design de newsletters e interfaces para campanhas digitais.</li>
+        `,
+
+        job3_title: "Designer Gráfico e Digital",
+        job3_date: "Mai 2016 – Set 2017",
+        job3_bullets: `
+        <li>Desenvolvimento de apresentações corporativas estratégicas e materiais digitais de apoio à marca.</li>
+        `,
+
+        edu_title: "Formação Acadêmica",
+        edu1_title: "Pós-graduação em Engenharia de Software com ênfase em IA",
+        edu1_date: "Cursando",
+        edu1_desc: "Foco na aplicação de Inteligência Artificial no desenvolvimento de produtos digitais.",
+
+        edu2_title: "Tecnólogo em Design Gráfico e Digital",
+        edu2_date: "Conclusão: 2025",
+
+        edu3_title: "Técnico em Desenvolvimento de Sistemas",
+        edu3_date: "Conclusão: 2022",
+
+        cert_title: "Certificações & Links"
+    },
+
+    en: {
+        role: "UI Engineer | Front-end Developer (React) | JavaScript | Design Systems | UX/UI | AI-Driven Interfaces",
+
+        about_title: "About",
+
+        about_p1: `
+        Front-end Developer with experience building interfaces for <strong>large-scale e-commerce platforms</strong>, working on landing pages and web applications for brands such as <strong>Xiaomi</strong> and <strong>Honor</strong> in Brazil.<br><br>
+
+        Hands-on experience with <strong>React, JavaScript, HTML5, CSS3, and Git</strong>, focusing on performance, responsiveness, and user experience (UX). Experience with the <strong>Linx platform</strong>, developing scalable interfaces and ensuring visual and functional consistency.<br><br>
+
+        Responsible for maintaining and evolving front-end systems of official channels, collaborating with design and product teams to integrate <strong>UI/UX, Design Systems, and development</strong>, reducing inconsistencies and improving the shopping experience.
+        `,
+
+        about_p2: `
+        Currently focused on applying <strong>Artificial Intelligence</strong> to interface development and workflow optimization. 
+        My key strength is acting as a bridge between design and development, ensuring technical feasibility from the first wireframe to final implementation.
+        `,
+
+        exp_title: "Professional Experience",
+
+        job1_title: "Front-End Developer (UI/UX)",
+        job1_date: "Sep 2021 – Present",
+        job1_desc: "Direct involvement in maintaining and evolving the official channels for <strong>Xiaomi Brazil</strong> and <strong>Honor Brazil</strong>.",
+
+        job1_bullets: `
+        <li>Development of responsive storefronts and landing pages using <strong>Liquid</strong> on the <strong>Linx</strong> platform.</li>
+        <li>Built interfaces for large-scale e-commerce platforms, ensuring visual consistency and high performance.</li>
+        <li>Implemented solutions using <strong>HTML5, CSS3, and JavaScript</strong> for advanced layout and component customization.</li>
+        <li>Worked closely with Design and Product teams to ensure visual accuracy and improved user experience (UX).</li>
+        `,
+
+        job2_title: "Graphic & Digital Designer",
+        job2_date: "Feb 2018 – Aug 2018",
+        job2_bullets: `
+        <li>Created visual identity and high-conversion assets for inbound marketing strategies.</li>
+        <li>Designed newsletters and interfaces for digital campaigns.</li>
+        `,
+
+        job3_title: "Graphic & Digital Designer",
+        job3_date: "May 2016 – Sep 2017",
+        job3_bullets: `
+        <li>Developed strategic corporate presentations and digital brand support materials.</li>
+        `,
+
+        edu_title: "Education",
+        edu1_title: "Postgraduate in Software Engineering (AI Focus)",
+        edu1_date: "In Progress",
+        edu1_desc: "Focused on applying Artificial Intelligence in digital product development.",
+
+        edu2_title: "Technologist Degree in Graphic & Digital Design",
+        edu2_date: "Graduation: 2025",
+
+        edu3_title: "Systems Development Technician",
+        edu3_date: "Graduation: 2022",
+
+        cert_title: "Certifications & Links"
+    }
+};
+
 
         const langToggleBtn = document.getElementById('langToggle');
         const themeToggleBtn = document.getElementById('themeToggle');
