@@ -342,6 +342,14 @@
     transition: all 0.3s ease;
 }
 
+.project-card {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 .project-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
@@ -379,6 +387,13 @@
     text-decoration: none;
     border-bottom: 1px dotted var(--accent);
 }
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+}
+
 
 
 @media print {
