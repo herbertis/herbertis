@@ -327,6 +327,59 @@
             .controls { top: 15px; right: 15px; }
         }
 
+        .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.project-header h3 {
+    font-size: 1.1rem;
+}
+
+.project-tag {
+    background: rgba(56,189,248,0.1);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent);
+}
+
+
 @media print {
 
     body {
@@ -567,6 +620,63 @@ Experiência como ponte entre design e desenvolvimento, garantindo viabilidade t
                 <span class="skill-tag">Bootstrap</span>
             </div>
         </section>
+
+
+        <section id="projects">
+    <h2><i class="fas fa-rocket"></i> Projetos em Destaque</h2>
+
+    <div class="projects-grid">
+
+        <!-- Projeto 1 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3>Landing Page Xiaomi</h3>
+                <span class="project-tag">E-commerce</span>
+            </div>
+
+            <p>
+                Desenvolvimento de landing page para produto no e-commerce da Xiaomi Brasil, 
+                focado em performance, responsividade e conversão.
+            </p>
+
+            <ul>
+                <li>Stack: HTML, CSS, JavaScript, Liquid (Linx)</li>
+                <li>Foco em UX e performance</li>
+                <li>Integração com layout oficial da marca</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="#" target="_blank">🔗 Ver Projeto</a>
+                <a href="#" target="_blank">💻 Código</a>
+            </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3>Site </h3>
+                <span class="project-tag">React</span>
+            </div>
+
+            <p>
+                Aplicação inspirada em fast-food com animações, foco em UI moderna e componentização.
+            </p>
+
+            <ul>
+                <li>Stack: React, CSS, Framer Motion</li>
+                <li>Componentização e responsividade</li>
+                <li>UI inspirada em grandes marcas</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="#" target="_blank">🔗 Demo</a>
+                <a href="#" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
         <section id="experience">
             <h2><i class="fas fa-briefcase"></i> <span data-i18n="exp_title">Experiência Profissional</span></h2>
